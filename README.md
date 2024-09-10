@@ -8,7 +8,7 @@
 **نکته:** خیلی ممنون از رسول عزیز که تو نوشتن اسکریپت های پایتون به من کمک کرد.\
 https://www.linkedin.com/in/rasoul-baharvandi-877a32221/
 
-# قسمت 1
+# قسمت 1 (Scripts)
 **فایل afta.py:**\
 ی فایل پایتون وجود داره به اسم afta.py که با استفاده از Afta_Service.sh به صورت سرویس بالا میاد. با استفاده از این فایل پایتون شما میتونید تمامی Feed های افتا رو دانلود کنید. این Feed یک فایل zip هست که داخل مسیر "/opt/Threatintel/" دانلود میشه و بعد Extract میشه به 3تا فایل جداگونه به اسم های hash_feed.csv، ip_feed.csv و url_feed.csv
 
@@ -51,4 +51,29 @@ rm -rf Scripts.tar.gz
  ```
 bash Afta_Service.sh
 bash Webserver_Service.sh
+   ```
+# قسمت 2 (Splunk Addon)
+**پیشنیاز نصب:**\
+شما اول باید Addon زیر رو از آدرس زیر دانلود و نصب کنید.
+https://splunkbase.splunk.com/app/635
+
+**نصب TA-AFTA-ES:**\
+**1-** اول فایل TA رو از آدرس زیر دانلود کنید.
+ ```
+   wget https://github.com/Mohammad-Mirasadollahi/AFTA-TI-Splunk-ES-Integration/releases/download/Splunk/TA-AFTA-ES.tar.gz
+   ```
+**2-** انتقال و extract این addon با دستور زیر.
+```
+mv TA-AFTA-ES.tar.gz /opt/splunk/etc/apps/
+cd /opt/splunk/etc/apps/
+tar xzvf TA-AFTA-ES.tar.gz
+rm -rf TA-AFTA-ES.tar.gz
+   ```
+
+**نکته:** فایل savedsearches.conf داخل پوشه TA-AFTA-ES/default رو باز کنید و IP در قسمت url رو براساس سازمان خودتون تغییر بدید. این IP میشه Web Server IP ای که تورحله قبل سرویسش رو نصب کردیم.
+
+
+**3-** در آخر هم اسپلانک رو Restart کنید.
+```
+   /opt/splunk/bin/./splunk restart
    ```
