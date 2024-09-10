@@ -5,12 +5,17 @@
 **1-** دانلود فایل های افتا و سپس قرار دادن فایل هاش توی یک Web Server\
 **2-** نصب Addon لازم روی اسپلانک برای دریافت Feedها و ترکیبش با Splunk ES TI
 
+تمامی Feedها تو lookup های زیر ذخیره میشن.\
+afta_es_ip_intel\
+afta_es_http_intel\
+afta_es_file_intel
+
 **نکته:** خیلی ممنون از رسول عزیز که تو نوشتن اسکریپت های پایتون به من کمک کرد.\
 https://www.linkedin.com/in/rasoul-baharvandi-877a32221/
 
 # قسمت 1 (Scripts)
 **فایل afta.py:**\
-ی فایل پایتون وجود داره به اسم afta.py که با استفاده از Afta_Service.sh به صورت سرویس بالا میاد. با استفاده از این فایل پایتون شما میتونید تمامی Feed های افتا رو دانلود کنید. این Feed یک فایل zip هست که داخل مسیر "/opt/Threatintel/" دانلود میشه و بعد Extract میشه به 3تا فایل جداگونه به اسم های hash_feed.csv، ip_feed.csv و url_feed.csv
+ی فایل پایتون وجود داره به اسم afta.py که با استفاده از Afta_Service.sh به صورت سرویس بالا میاد. با استفاده از این فایل پایتون شما میتونید تمامی Feed های افتا رو به صورت خودکار هر 24ساعت یک بار دانلود کنید. این Feed یک فایل zip هست که داخل مسیر "/opt/Threatintel/" دانلود میشه و بعد Extract میشه به 3تا فایل جداگونه به اسم های hash_feed.csv، ip_feed.csv و url_feed.csv
 
 - **متغییرها**\
   **1-** به نام download_directory و extract_directory که میشه مسیر دانلود و اکسترکت Feedها. برای هر 2 مسیر به صورت پیشفرض از "/opt/Threatintel/" استفاده میشود.
