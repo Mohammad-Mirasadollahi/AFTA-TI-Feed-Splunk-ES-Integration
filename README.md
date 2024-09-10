@@ -59,15 +59,15 @@ bash Webserver_Service.sh
    ```
 # قسمت 2 (Splunk Addon)
 **پیشنیاز نصب:**\
-شما اول باید Addon زیر رو از آدرس زیر دانلود و نصب کنید.
+شما اول باید Addon زیر رو از آدرس زیر دانلود و نصب کنید.\
 https://splunkbase.splunk.com/app/635
 
 **نصب TA-AFTA-ES:**\
-**1-** اول فایل TA رو از آدرس زیر دانلود کنید.
+**1-**  فایل TA رو از آدرس زیر دانلود کنید.
  ```
    wget https://github.com/Mohammad-Mirasadollahi/AFTA-TI-Splunk-ES-Integration/releases/download/Splunk/TA-AFTA-ES.tar.gz
    ```
-**2-** انتقال و extract این addon با دستور زیر.
+**2-** انتقال و extract این addon با دستور زیر. (مسیر نصب پیشفرض اسپلانک انتخاب شده)
 ```
 mv TA-AFTA-ES.tar.gz /opt/splunk/etc/apps/
 cd /opt/splunk/etc/apps/
@@ -75,10 +75,12 @@ tar xzvf TA-AFTA-ES.tar.gz
 rm -rf TA-AFTA-ES.tar.gz
    ```
 
-**نکته:** فایل savedsearches.conf داخل پوشه TA-AFTA-ES/default رو باز کنید و IP در قسمت url رو براساس سازمان خودتون تغییر بدید. این IP میشه Web Server IP ای که تورحله قبل سرویسش رو نصب کردیم.
+**نکته:** فایل savedsearches.conf داخل پوشه TA-AFTA-ES/default رو باز کنید و IP در قسمت url رو براساس سازمان خودتون تغییر بدید. این IP میشه Web Server IP ای که تو مرحله قبل سرویسش رو نصب کردیم.
 
 
 **3-** در آخر هم اسپلانک رو Restart کنید.
 ```
    /opt/splunk/bin/./splunk restart
    ```
+# ایده:
+https://github.com/splunk/TA-misp_es
