@@ -23,7 +23,7 @@ https://www.linkedin.com/in/rasoul-baharvandi-877a32221/
 - **متغییرها**\
   **1-** به نام PORT که مشخص کننده پورت Web Server هست. به صورت پیشفرض از 8078 استفاده میشود.\
   **2-** به نام DIRECTORY که مشخص کننده مسیر Web Server هست. به صورت پیشفرض از "/opt/Threatintel/" استفاده میشود.\
-  **3-** به نام REAL_LOG_FILE_PATH که مشخص کننده پورت مسیر لاگ Web Server هست. به صورت پیشفرض از "var/log/Web_Server.log/" استفاده میشود.\
+  **3-** به نام REAL_LOG_FILE_PATH که مشخص کننده مسیر لاگ Web Server هست. به صورت پیشفرض از "var/log/Web_Server.log/" استفاده میشود.\
   **4-** به نام ALLOWED_IPS = که مشخص کننده لیست IPهای مجاز که میتوانند به وب سرور وصل شوند هست.
 
 **نحوه پیاده سازی:**\
